@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppliNaruto</string>
+    <string name="action_settings">Settings</string>
+    <string name="titre">Les Personnages de Naruto</string>
+    <string name="afficher">afficher les personnages</string>
+    <string name="lecture">Attendez...</string>
+</resources>
