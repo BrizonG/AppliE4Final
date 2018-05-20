@@ -20,4 +20,5 @@ public class Personnage {
     public String getTopo() {
         return topo;
     }
+
 }

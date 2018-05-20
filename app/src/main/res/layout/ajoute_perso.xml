@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
 
     <Button
         android:id="@+id/creerperso"
@@ -19,38 +20,39 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
         android:layout_marginTop="24dp"
         android:text="Vous êtes sur la création de personnage"
         android:textColor="@android:color/black"
         android:textSize="40px"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nomperso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
         android:layout_marginEnd="6dp"
+        android:layout_marginTop="82dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text=" "
-        app:layout_constraintBaseline_toBaselineOf="@+id/indicnomperso"
+        app:layout_constraintBottom_toTopOf="@+id/indictopoperso"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/indicnomperso" />
+        app:layout_constraintStart_toEndOf="@+id/indicnomperso"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/indicnomperso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
         android:text="Nom du personnage :"
         android:textColor="@android:color/black"
         android:textSize="30px"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nomperso"
         app:layout_constraintEnd_toStartOf="@+id/nomperso"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/topoperso"
@@ -60,7 +62,6 @@
         android:layout_marginTop="192dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text=" "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/indictopoperso"
         app:layout_constraintTop_toTopOf="parent" />
@@ -76,4 +77,28 @@
         app:layout_constraintEnd_toStartOf="@+id/topoperso"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/indicmangaperso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manga du personnage :"
+        android:textColor="@android:color/black"
+        android:textSize="28px"
+        app:layout_constraintBaseline_toBaselineOf="@+id/mangaperso"
+        app:layout_constraintEnd_toStartOf="@+id/mangaperso"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/mangaperso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/indicmangaperso"
+        app:layout_constraintTop_toBottomOf="@+id/topoperso" />
 </android.support.constraint.ConstraintLayout>

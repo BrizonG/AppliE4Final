@@ -4,6 +4,8 @@ package bdd;
         import android.content.Context;
         import android.database.Cursor;
         import android.database.sqlite.SQLiteDatabase;
+        import android.util.Log;
+
         import java.util.ArrayList;
         import metier.Personnage;
 
@@ -42,6 +44,38 @@ public class GestionBD {
             liste.add("erreur de bdd!");
         }
         return liste;
+    }
+
+    public String donneLeTopo(String nomduperso){
+        String res ="";
+        String query = " select topo from personnages where nom = '"+ nomduperso +"' ";
+        Log.i("doInback","Requete : "+query);
+        Cursor c = maBase.rawQuery(query,null);
+        if(c != null) {
+            if (c.moveToFirst()) {
+                res = c.getString(0);
+            }
+        }
+        else{
+            res = "Il n'y a pas de topo pour ce personnage !";
+        }
+        return res;
+    }
+
+    public String donneLeManga(String nomduperso){
+        String res ="";
+        String query = " select manga from personnages where nom = '"+ nomduperso +"' ";
+        Log.i("doInback","Requete : "+query);
+        Cursor c = maBase.rawQuery(query,null);
+        if(c != null) {
+            if (c.moveToFirst()) {
+                res = c.getString(0);
+            }
+        }
+        else{
+            res = "Il n'y a pas de manga pour ce personnage !";
+        }
+        return res;
     }
 
 }

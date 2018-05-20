@@ -71,6 +71,10 @@ public class Liste extends ListActivity implements AdapterView.OnItemClickListen
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Intent lesInfos = new Intent(getApplicationContext(), InfosPerso.class);
+        lesInfos.putExtra("perso", lesValeurs.get(position));
+        startActivity(lesInfos);
+
         Toast.makeText(getApplicationContext(),"ligne "+(position+1),Toast.LENGTH_LONG).show();
         Toast.makeText(getApplicationContext(),"perso :  "+lesValeurs.get(position),Toast.LENGTH_LONG).show();
     }

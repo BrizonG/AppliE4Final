@@ -20,6 +20,7 @@ public class AjoutePerso extends AppCompatActivity {
     Button creer;
     EditText nomperso;
     EditText topoperso;
+    //EditText mangaperso;
     Personnage ajou_pers;
     GestionBD sgbd;
     Context context = this;
@@ -36,8 +37,10 @@ public class AjoutePerso extends AppCompatActivity {
                 sgbd = new GestionBD(context);
                 nomperso = (EditText) findViewById(R.id.nomperso);
                 topoperso = (EditText) findViewById(R.id.topoperso);
+                //mangaperso = (EditText) findViewById(R.id.mangaperso);
                 String n_perso = nomperso.getText().toString();
                 String t_perso = topoperso.getText().toString();
+                //String m_perso = mangaperso.getText().toString();
                 ajou_pers = new Personnage(n_perso, t_perso);
                 sgbd.open();
                 sgbd.ajoutePerso(ajou_pers);
