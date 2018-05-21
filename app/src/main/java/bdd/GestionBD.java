@@ -31,8 +31,8 @@ public class GestionBD {
         return maBase.insert("personnages", null, v);
     }
 
-    public void supprimepersos(){
-        maBase.delete("personnages", null, null);
+    public void supprimeperso(String nomduperso){
+        maBase.execSQL("delete from personnages where nom='"+nomduperso+"'");
     }
 
     public ArrayList<String> donneLesNoms(){
@@ -61,21 +61,4 @@ public class GestionBD {
         }
         return res;
     }
-
-    public String donneLeManga(String nomduperso){
-        String res ="";
-        String query = " select manga from personnages where nom = '"+ nomduperso +"' ";
-        Log.i("doInback","Requete : "+query);
-        Cursor c = maBase.rawQuery(query,null);
-        if(c != null) {
-            if (c.moveToFirst()) {
-                res = c.getString(0);
-            }
-        }
-        else{
-            res = "Il n'y a pas de manga pour ce personnage !";
-        }
-        return res;
-    }
-
 }

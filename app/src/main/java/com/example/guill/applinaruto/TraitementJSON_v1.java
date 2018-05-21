@@ -53,7 +53,7 @@ public class TraitementJSON_v1 extends AsyncTask<String, Void, Boolean>{
         Boolean result = false;
         try {
             String ficPersonnages;
-            //RÃ©cupÃ©ration du contenu du fichier json sur serveur
+            //Recuperation du contenu du fichier json sur serveur
             ficPersonnages = lectureFichierDistant();
             Log.i("doInBack","le fichier distant : "+ficPersonnages);
             //Transformation du fichier obtenu en objet JSON
@@ -148,17 +148,4 @@ public class TraitementJSON_v1 extends AsyncTask<String, Void, Boolean>{
 
         return builder.toString();
     }
-
-    public List<Personnage> getLesPersonnages() {
-
-        return lesPersonnages;
-    }
-
-    public String getLesNoms(){
-        String liste = "";
-        for (Personnage perso : lesPersonnages)
-            liste += perso.getNom()+"\n";
-        return liste;
-    }
-
 }

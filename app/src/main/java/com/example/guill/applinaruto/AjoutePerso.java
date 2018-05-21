@@ -20,7 +20,6 @@ public class AjoutePerso extends AppCompatActivity {
     Button creer;
     EditText nomperso;
     EditText topoperso;
-    //EditText mangaperso;
     Personnage ajou_pers;
     GestionBD sgbd;
     Context context = this;
@@ -30,6 +29,7 @@ public class AjoutePerso extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ajoute_perso);
 
+        //Action de creation de personnage
         creer = (Button) findViewById(R.id.creerperso);
         creer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,12 +37,11 @@ public class AjoutePerso extends AppCompatActivity {
                 sgbd = new GestionBD(context);
                 nomperso = (EditText) findViewById(R.id.nomperso);
                 topoperso = (EditText) findViewById(R.id.topoperso);
-                //mangaperso = (EditText) findViewById(R.id.mangaperso);
                 String n_perso = nomperso.getText().toString();
                 String t_perso = topoperso.getText().toString();
-                //String m_perso = mangaperso.getText().toString();
                 ajou_pers = new Personnage(n_perso, t_perso);
                 sgbd.open();
+                //Ajout du perso dans la bdd
                 sgbd.ajoutePerso(ajou_pers);
                 Toast.makeText(getApplicationContext(),"Vous avez ajouté :  "+ n_perso,Toast.LENGTH_LONG).show();
                 sgbd.close();

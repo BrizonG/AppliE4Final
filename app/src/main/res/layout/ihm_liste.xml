@@ -18,4 +18,10 @@
         android:layout_height="wrap_content"
         android:text="Ajouter un personnage" />
 
+    <Button
+        android:id="@+id/updatelistview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RAFRAICHIR LA LISTE" />
+
 </LinearLayout>

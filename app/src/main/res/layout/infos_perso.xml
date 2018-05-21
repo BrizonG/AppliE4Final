@@ -10,8 +10,8 @@
         android:id="@+id/nom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="80dp"
         android:text="Nom"
         android:textSize="50px"
         app:layout_constraintStart_toEndOf="@+id/textView2"
@@ -22,7 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="140dp"
         android:layout_marginEnd="79dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:text="Topo"
         android:textSize="40px"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,8 @@
         android:textSize="50px"
         app:layout_constraintBottom_toBottomOf="@+id/nom"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nom" />
+        app:layout_constraintTop_toTopOf="@+id/nom"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView3"
@@ -47,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="34dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         android:text="Topo :"
         android:textColor="@android:color/black"
         android:textSize="50px"
@@ -67,23 +68,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/deleteperso"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Manga :"
-        android:textColor="@android:color/black"
-        android:textSize="50px"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="120dp" />
-
-    <TextView
-        android:id="@+id/manga"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Manga"
-        android:textSize="50px"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="120dp" />
+        android:layout_marginBottom="18dp"
+        android:text="SUPPRIMER CE PERSONNAGE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
